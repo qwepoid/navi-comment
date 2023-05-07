@@ -13,9 +13,11 @@ const Reply = ({
   }
 
   return (
-    <div>
+    <div className="min-w-full flex flex-1">
       <input
         placeholder="Reply"
+        className="border-2 p-1 flex-wrap flex-1 mr-2"
+        autoFocus
         value={replyText}
         onChange={(e) => setReplyText(e.target.value)}
       />
