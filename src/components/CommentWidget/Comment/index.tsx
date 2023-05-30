@@ -14,10 +14,11 @@ const Comment = ({
   const [isEditMode, setEditMode] = useState<boolean>(false);
   const [commentTitle, setCommentTitle] = useState<string>("");
   const titleRef = useRef(null);
+
   function handleAddComment(): void {
     if (isEditMode) {
       const updatedComment = titleRef?.current?.innerHTML;
-      if (updatedComment.lenth === 0) return;
+      if (updatedComment.length === 0) return;
       handleEditComment(currentComment.id, titleRef?.current?.innerHTML);
       setEditMode(false);
     } else {
